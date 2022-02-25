@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9c16a59e5e9e4dbc86ce51a83b132175" Name="Diagram1">
+        <EntityTypeShape EntityType="IgishevWSModel.BloodService" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="IgishevWSModel.Insurance" Width="1.5" PointX="1.5" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IgishevWSModel.LastEnter" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IgishevWSModel.Order" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="IgishevWSModel.Patient" Width="1.5" PointX="3.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IgishevWSModel.Service" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IgishevWSModel.ServicesUser" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IgishevWSModel.SocialType" Width="1.5" PointX="1.5" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IgishevWSModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IgishevWSModel.User" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="IgishevWSModel.FK_BloodServices_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_BloodServices_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_BloodServices_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_Patients_Insurance" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_LastEnter_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_Order_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_Order_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_Order_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_Patients_SocialType" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_ServicesUsers_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="IgishevWSModel.FK_ServicesUsers_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

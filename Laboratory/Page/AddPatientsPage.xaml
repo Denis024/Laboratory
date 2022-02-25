@@ -1,0 +1,157 @@
+﻿<Page x:Class="Laboratory.AddPatientsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laboratory"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddPatientsPage" FontFamily="Comic Sans MS">
+
+    <StackPanel Background="White" 
+                Orientation="Vertical">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="170"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>       
+
+            <TextBlock Text="Введите ФИО" 
+                       Grid.Column="0" 
+                       Grid.Row="0" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Right" 
+                       Margin="10"/>
+            <TextBlock Text="Укажите дату рождения"
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Margin="10"/>
+            <TextBlock Text="Укажите серию и номер паспорта"
+                       Grid.Column="0"
+                       Grid.Row="2"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Margin="10"/>
+            <TextBlock Text="Телефон" 
+                       Grid.Column="0"
+                       Grid.Row="3"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right" 
+                       Margin="10"/>
+            <TextBlock Text="E-mail"
+                       Grid.Column="2"
+                       Grid.Row="0"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Margin="10"/>
+            <TextBlock Text="№ страхового полиса" 
+                       Grid.Column="2" 
+                       Grid.Row="1"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Margin="10"/>
+            <TextBlock Text="Тип страхового полиса"
+                       Grid.Column="2"
+                       Grid.Row="2"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Margin="10"/>
+            <TextBlock Text="Страховая компания"
+                       Grid.Column="2" 
+                       Grid.Row="3" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       Margin="10"/>
+
+            <TextBox Grid.Column="1"                 
+                     VerticalAlignment="Center"
+                     Name="fullnameTB" 
+                     Text="{Binding FullName}"/>
+            <DatePicker Grid.Column="1"
+                        Grid.Row="1"
+                        VerticalAlignment="Center"
+                        Margin="5"
+                        Name="BirthDayDP"
+                        SelectedDate="{Binding DateOfBirth}"/>
+            
+            <Grid Grid.Row="2" 
+                  Grid.Column="1">
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Top">
+                    <Label Content="Серия"
+                           VerticalAlignment="Center"/>
+                    <TextBox Name="pasSeriesTB"
+                             Width="100"
+                             Text="{Binding PassportSeries}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Bottom">
+                    <Label Content="Номер"
+                           VerticalAlignment="Center"/>
+                    <TextBox Name="pasNumberTB"
+                             Width="100"
+                             Text="{Binding PassportNumbers}"/>
+                </StackPanel>
+            </Grid>
+  
+            <TextBox Grid.Column="1"
+                     Grid.Row="3"
+                     VerticalAlignment="Center"
+                     Name="phoneTB"
+                     Text="{Binding Phone}"/>
+            <TextBox Grid.Column="3"
+                     Grid.Row="0"
+                     VerticalAlignment="Center"
+                     Name="emailTB"
+                     Text="{Binding Email}"/>
+            <TextBox Grid.Column="3"
+                     Grid.Row="1"
+                     VerticalAlignment="Center"
+                     Name="socialNumberTB"
+                     Text="{Binding SocialNumber}"/>
+            <ComboBox Grid.Column="3"
+                      Grid.Row="2"
+                      VerticalAlignment="Center"
+                      Name="SocialTypeCB" 
+                      Margin="5"
+                      DisplayMemberPath="Type"
+                      SelectedItem="{Binding SocialType}"/>
+            <ComboBox Grid.Column="3"
+                      Grid.Row="3"
+                      VerticalAlignment="Center"
+                      Name="InsuranceCB"
+                      Margin="5"
+                      DisplayMemberPath="Name"
+                      IsEditable="True"
+                      IsTextSearchCaseSensitive="False"
+                      SelectedItem="{Binding Insurance}"/>
+
+            <Button Grid.ColumnSpan="2"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Row="5"
+                    Content="Добавить"
+                    Name="BtnAddPatients"
+                    Click="BtnAddPatients_Click"/>
+            <Button Grid.ColumnSpan="2"
+                    Grid.Column="2"
+                    Grid.Row="4"                
+                    Content="Назад"
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"
+                    Name="BtnBack"
+                    Click="BtnBack_Click"/>
+        </Grid>
+    </StackPanel>
+</Page>
